@@ -34,6 +34,13 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* Mobile banner scaling */
+    @media (max-width: 640px) {
+      .hero-banner {
+        object-fit: contain !important;
+        object-position: center top !important;
+      }
+    }
   </style>
 </head>
 <body class="w-screen min-h-screen overflow-x-hidden bg-black text-white">
@@ -80,12 +87,12 @@
   
     <section id="bio" class="fade-in max-w-7xl mx-auto py-4 px-4 text-center mt-[-120px]">
   <div class="relative w-full h-[60vh] overflow-hidden mb-12 mt-32">
-    <img src="banner-new.jpg" alt="Code Eternal band banner" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 150px;" loading="eager" fetchpriority="high">
+    <img src="banner-new.jpg" alt="Code Eternal band banner" class="hero-banner absolute inset-0 w-full h-full object-cover" style="object-position: center 150px;" loading="eager" fetchpriority="high">
     <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
     <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
     <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10"></div>
     <div class="relative z-10 flex justify-center items-center h-full">
-      <img src="logo-white.png" alt="Code Eternal logo" class="w-[300px] sm:w-[400px] md:w-[500px]">
+      <img src="logo-white.png" alt="Code Eternal logo" class="w-[200px] sm:w-[300px] md:w-[400px] mt-12">
     </div>
   </div>
   <section class="max-w-7xl mx-auto py-4 px-4 mt-[-60px]">
@@ -208,3 +215,4 @@
   </script>
 </body>
 </html>
+
