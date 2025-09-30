@@ -21,6 +21,10 @@
       0% { transform: translateY(0) scale(1); opacity: 1; }
       100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
     }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -36,41 +40,35 @@
   <!-- Navigation -->
   <nav class="fixed top-0 w-full bg-opacity-80 bg-[var(--primary-black)] backdrop-blur z-50">
     <div class="w-full px-4 mx-auto flex items-center justify-between p-4">
-      <a href="./">
-        <img src="./logo-white.png" alt="Code Eternal logo" class="h-12">
+      <a href="#">
+        <img src="./logo.png" alt="Code Eternal logo" class="h-12">
       </a>
-
       <ul class="hidden md:flex space-x-8 text-lg heading-font">
         <li><a href="#bio" class="hover:text-[var(--bright-red)] heading-font">Biography</a></li>
         <li><a href="#music" class="hover:text-[var(--bright-red)] heading-font">Music</a></li>
         <li><a href="#videos" class="hover:text-[var(--bright-red)] heading-font">Videos</a></li>
-        <li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
+  <li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
         <li><a href="#contact" class="hover:text-[var(--bright-red)]">Contact</a></li>
       </ul>
-
       <div class="hidden md:flex space-x-4 ml-4">
-        <a href="https://www.instagram.com/code_eternal/" target="_blank" rel="noopener">
+        <a href="https://www.instagram.com/code_eternal/" target="_blank">
           <img src="./icon-instagram.svg" alt="Instagram" class="h-8 w-8 hover:opacity-80">
         </a>
-        <a href="https://www.youtube.com/@codeeternal" target="_blank" rel="noopener">
+        <a href="https://www.youtube.com/@codeeternal" target="_blank">
           <img src="./icon-youtube.svg" alt="YouTube" class="h-8 w-8 hover:opacity-80">
         </a>
       </div>
-
-      <button class="md:hidden" id="menu-btn" aria-label="Avaa valikko">
+      <button class="md:hidden" id="menu-btn">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
-
-    <!-- Mobile menu -->
     <div class="md:hidden bg-[var(--primary-black)]" id="mobile-menu" style="display:none">
-      <ul class="flex flex-col gap-4 p-4 text-lg heading-font">
-        <li><a href="#bio" class="hover:text-[var(--bright-red)]">Biography</a></li>
-        <li><a href="#music" class="hover:text-[var(--bright-red)]">Music</a></li>
-        <li><a href="#members" class="hover:text-[var(--bright-red)]">Band Members</a></li>
-        <li><a href="#tour" class="hover:text-[var(--bright-red)]">Tour</a></li>
+      <li><a href="#bio" class="hover:text-[var(--bright-red)] heading-font">Biography</a></li>
+        <li><a href="#music" class="hover:text-[var(--bright-red)] heading-font">Music</a></li>
+        <li><a href="#members" class="hover:text-[var(--bright-red)] heading-font">Band Members</a></li>
+<li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
         <li><a href="#media" class="hover:text-[var(--bright-red)]">Media</a></li>
         <li><a href="#shop" class="hover:text-[var(--bright-red)]">Shop</a></li>
         <li><a href="#contact" class="hover:text-[var(--bright-red)]">Contact</a></li>
@@ -79,84 +77,77 @@
   </nav>
 
   <main class="pt-0">
+  
     <section id="bio" class="fade-in max-w-7xl mx-auto py-4 px-4 text-center mt-[-120px]">
-      <div class="relative w-full h-[60vh] overflow-hidden mb-12 mt-32">
-        <img src="./banner.jpg" alt="Code Eternal band banner" class="absolute inset-0 w-full h-full object-cover object-center" loading="eager" fetchpriority="high">
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
-        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <div class="relative z-10 flex justify-center items-center h-full">
-          <img src="./logo-white.png" alt="Code Eternal logo" class="w-[300px] sm:w-[400px] md:w-[500px]">
-        </div>
-      </div>
-
-      <section class="max-w-7xl mx-auto py-4 px-4 mt-[-60px]">
+  <div class="relative w-full h-[60vh] overflow-hidden mb-12 mt-32">
+    <img src="./banner.jpg" alt="Code Eternal band banner" class="absolute inset-0 w-full h-full object-cover object-[center_100px]" loading="eager" fetchpriority="high">
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
+    <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10"></div>
+    <div class="relative z-10 flex justify-center items-center h-full">
+      <img src="./logo.png" alt="Code Eternal logo" class="w-[300px] sm:w-[400px] md:w-[500px]">
+    </div>
+  </div>
+  <section class="max-w-7xl mx-auto py-4 px-4 mt-[-60px]">
         <h2 class="text-2xl font-bold mb-4 heading-font">Biography</h2>
         <p class="text-lg leading-relaxed mb-4 px-2 sm:px-8 md:px-16 lg:px-32">
-          Code Eternal has a fresh and straight-forward take on progressive metal. The band was founded in <span class="whitespace-nowrap">South Ostrobothnia, Finland</span> in 2021.
-          <span id="more-bio" class="hidden">
-            In 2022, they released their instrumental debut EP <em>"Sixth Wave"</em>, which showcased their technical maturity and compositional ambition — at a time when most members were just 15 years old. Now joined by powerful vocalist Teemu Dahlman, the band is preparing its first studio album, promising to push the boundaries of progressive metal. Their upcoming studio album will feature groovy, funk-influenced riffs and powerful ballads inspired by classic 80s heavy metal, showcasing the band's diverse sound.
-          </span>
-          <button onclick="document.getElementById('more-bio').classList.toggle('hidden'); this.remove();" class="ml-2 text-base text-[var(--bright-red)] underline font-semibold">See more</button>
-        </p>
+          Code Eternal has a fresh and straight-forward take on progressive metal. The band was founded in <span class="whitespace-nowrap">South Ostrobothnia, Finland</span> in 2021.<span id="more-bio" class="hidden"> In 2022, they released their instrumental debut EP <em>"Sixth Wave"</em>, which showcased their technical maturity and compositional ambition — at a time when most members were just 15 years old. Now joined by powerful vocalist Teemu Dahlman, the band is preparing its first studio album, promising to push the boundaries of progressive metal. Their upcoming studio album will feature groovy, funk-influenced riffs and powerful ballads inspired by classic 80s heavy metal, showcasing the band's diverse sound.</span><button onclick="document.getElementById('more-bio').classList.toggle('hidden'); this.remove();" class="ml-2 text-base text-[var(--bright-red)] underline font-semibold">See more</button></p>
       </section>
 
       <section id="music" class="fade-in bg-black py-16 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-          <h2 class="text-2xl font-bold mb-8 heading-font">Music</h2>
-          <!-- Spotify Embed -->
-          <div class="mb-12 flex justify-center">
-            <iframe
-              class="w-full max-w-2xl h-96 rounded-lg shadow-lg"
-              src="https://open.spotify.com/embed/artist/5vuhEK6GfC6Zz0VJntD7qE"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <!-- Album cards grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Album cards go here -->
-          </div>
-        </div>
-      </section>
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-8 heading-font">Music</h2>
+    <!-- Spotify Embed -->
+    <div class="mb-12 flex justify-center">
+      <iframe
+        class="w-full max-w-2xl h-96 rounded-lg shadow-lg"
+        src="https://open.spotify.com/embed/artist/5vuhEK6GfC6Zz0VJntD7qE"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+        loading="lazy"
+      ></iframe>
+    </div>
+    <!-- Album cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Album cards go here -->
+    </div>
+  </div>
+</section>
 
-      <section id="videos" class="fade-in bg-black py-8 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-          <h2 class="text-2xl font-bold mb-12 heading-font">Videos</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <a href="https://www.youtube.com/watch?v=jU84DWHwmvQ" target="_blank" rel="noopener">
-              <img src="https://img.youtube.com/vi/jU84DWHwmvQ/hqdefault.jpg" alt="Video thumbnail" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition">
-              <h3 class="mt-2 text-lg font-semibold heading-font">The Wave</h3>
-            </a>
-            <a href="https://www.youtube.com/watch?v=plpTiH6RP64" target="_blank" rel="noopener">
-              <img src="https://img.youtube.com/vi/plpTiH6RP64/hqdefault.jpg" alt="Video thumbnail" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition">
-              <h3 class="mt-2 text-lg font-semibold heading-font">Race Through Time</h3>
-            </a>
-            <a href="https://www.youtube.com/watch?v=XFUP6p3ovgE" target="_blank" rel="noopener">
-              <img src="https://img.youtube.com/vi/XFUP6p3ovgE/hqdefault.jpg" alt="Video thumbnail" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition">
-              <h3 class="mt-2 text-lg font-semibold heading-font">Regeneration</h3>
-            </a>
-          </div>
-        </div>
-      </section>
+<section id="videos" class="fade-in bg-black py-8 px-4">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-12 heading-font">Videos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <a href="https://www.youtube.com/watch?v=jU84DWHwmvQ" target="_blank">
+          <img src="https://img.youtube.com/vi/jU84DWHwmvQ/hqdefault.jpg" alt="Video thumbnail" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition">
+          <h3 class="mt-2 text-lg font-semibold heading-font">The Wave</h3>
+      </a>
+      <a href="https://www.youtube.com/watch?v=plpTiH6RP64" target="_blank">
+          <img src="https://img.youtube.com/vi/plpTiH6RP64/hqdefault.jpg" alt="Video thumbnail" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition">
+          <h3 class="mt-2 text-lg font-semibold heading-font">Race Through Time</h3>
+      </a>
+      <a href="https://www.youtube.com/watch?v=XFUP6p3ovgE" target="_blank">
+          <img src="https://img.youtube.com/vi/XFUP6p3ovgE/hqdefault.jpg" alt="Video thumbnail" class="w-full h-auto rounded-lg shadow-lg hover:opacity-80 transition">
+          <h3 class="mt-2 text-lg font-semibold heading-font">Regeneration</h3>
+      </a>
+    </div>
+  </div>
+</section>
 
-      <section id="tour" class="fade-in py-16 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-          <h2 class="text-2xl font-bold mb-8 heading-font">Tour</h2>
-          <p class="text-lg text-gray-300">There are currently no scheduled shows. If you're interested in booking Code Eternal for a concert, festival, or private event, feel free to reach out through the contact section below.</p>
-        </div>
-      </section>
+<section id="tour" class="fade-in py-16 px-4">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-8 heading-font">Tour</h2>
+    <p class="text-lg text-gray-300">There are currently no scheduled shows. If you're interested in booking Code Eternal for a concert, festival, or private event, feel free to reach out through the contact section below.</p>
+  </div>
+</section>
 
-      <section id="contact" class="fade-in bg-[#111] py-16 px-4">
-        <div class="w-full px-4 mx-auto text-center">
-          <h2 class="text-2xl font-bold mb-4 heading-font">Contact</h2>
-          <p class="text-lg text-gray-300">
-            <a href="mailto:codeeternalband@gmail.com" class="text-[var(--bright-red)] underline">codeeternalband@gmail.com</a>
-          </p>
-        </div>
-      </section>
+<section id="contact" class="fade-in bg-[#111] py-16 px-4">
+  <div class="w-full px-4 mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-4 heading-font">Contact</h2>
+    <p class="text-lg text-gray-300"><a href="mailto:codeeternalband@gmail.com" class="text-[var(--bright-red)] underline">codeeternalband@gmail.com</a></p>
+  </div>
+</section>
     </section>
   </main>
 
@@ -197,14 +188,8 @@
         btn.addEventListener('click', () => {
           menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
         });
-
-        // Sulje mobiilivalikko linkkiä klikattaessa
-        menu.querySelectorAll('a').forEach(a => {
-          a.addEventListener('click', () => { menu.style.display = 'none'; });
-        });
       }
 
-      // Fade-in kun osiot tulevat näkyviin
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -212,10 +197,15 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, {
+        threshold: 0.1
+      });
 
-      document.querySelectorAll('.fade-in').forEach(section => observer.observe(section));
+      document.querySelectorAll('.fade-in').forEach(section => {
+        observer.observe(section);
+      });
     });
   </script>
 </body>
 </html>
+
