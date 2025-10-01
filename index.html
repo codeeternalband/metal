@@ -36,14 +36,17 @@
     }
     /* Mobile banner scaling */
     @media (max-width: 640px) {
-      /* Show full image on phones without side cropping */
       .hero-banner {
-        object-fit: contain !important;
-        object-position: center top !important;
+        object-fit: cover !important;
+        object-position: center 30% !important;
+        height: 70vh !important;
       }
-      /* Reduce bottom padding for logo to sit closer to the bio */
-      .logo-wrap { padding-bottom: 0.5rem !important; }
-    }
+      .logo-wrap {
+        padding-bottom: 1rem !important;
+      }
+      .logo-wrap img {
+        width: 220px !important;
+      }
     }
   </style>
 </head>
@@ -77,13 +80,11 @@
     </div>
     <div class="md:hidden bg-[var(--primary-black)]" id="mobile-menu" style="display:none">
       <li><a href="#bio" class="hover:text-[var(--bright-red)] heading-font">Biography</a></li>
-        <li><a href="#music" class="hover:text-[var(--bright-red)] heading-font">Music</a></li>
-        <li><a href="#members" class="hover:text-[var(--bright-red)] heading-font">Band Members</a></li>
-<li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
-        <li><a href="#media" class="hover:text-[var(--bright-red)]">Media</a></li>
-        <li><a href="#shop" class="hover:text-[var(--bright-red)]">Shop</a></li>
-        <li><a href="#contact" class="hover:text-[var(--bright-red)]">Contact</a></li>
-      </ul>
+      <li><a href="#music" class="hover:text-[var(--bright-red)] heading-font">Music</a></li>
+      <li><a href="#videos" class="hover:text-[var(--bright-red)] heading-font">Videos</a></li>
+      <li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
+      <li><a href="#contact" class="hover:text-[var(--bright-red)]">Contact</a></li>
+    </div>
     </div>
   </nav>
 
