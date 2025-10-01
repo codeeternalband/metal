@@ -36,12 +36,14 @@
     }
     /* Mobile banner scaling */
     @media (max-width: 640px) {
+      /* Show full image on phones without side cropping */
       .hero-banner {
-        object-fit: cover !important;
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
+        object-fit: contain !important;
+        object-position: center top !important;
       }
+      /* Reduce bottom padding for logo to sit closer to the bio */
+      .logo-wrap { padding-bottom: 0.5rem !important; }
+    }
     }
   </style>
 </head>
@@ -88,12 +90,12 @@
   <main class="pt-0">
   
     <section id="bio" class="fade-in max-w-7xl mx-auto py-4 px-4 text-center mt-[-120px]">
-  <div class="relative w-full h-[80vh] overflow-hidden mb-12 mt-32">
+  <div class="relative w-full h-[90vh] overflow-hidden mb-12 mt-32 hero-wrap">
     <img src="banner-new.jpg" alt="Code Eternal band banner" class="hero-banner absolute inset-0 w-full h-full object-cover" style="object-position: center 150px;" loading="eager" fetchpriority="high">
     <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
     <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
     <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10"></div>
-    <div class="relative z-10 flex justify-center items-end h-full pb-12">
+    <div class="relative z-10 flex justify-center items-end h-full pb-2 logo-wrap">
       <img src="logo-white.png" alt="Code Eternal logo" class="w-[180px] sm:w-[260px] md:w-[360px]">
     </div>
   </div>
