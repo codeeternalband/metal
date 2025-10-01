@@ -37,15 +37,17 @@
     /* Mobile banner scaling */
     @media (max-width: 640px) {
       .hero-banner {
-        object-fit: cover !important;
-        object-position: center 30% !important;
-        height: 70vh !important;
+        object-fit: contain !important;
+        object-position: center top !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 70vh !important;
       }
       .logo-wrap {
-        padding-bottom: 1rem !important;
+        padding-bottom: 0.5rem !important;
       }
       .logo-wrap img {
-        width: 220px !important;
+        width: 200px !important;
       }
     }
   </style>
