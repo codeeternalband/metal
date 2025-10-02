@@ -1,112 +1,111 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Eternal</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Spectral:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --primary-black: #000000;
-      --dark-red: #8B0000;
-      --bright-red: #C8102E;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Spectral', serif; }
-    .heading-font { font-family: 'Cinzel', serif; }
-    @keyframes flyUp {
-      0% { transform: translateY(0) scale(1); opacity: 1; }
-      100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    /* Desktop hero fix */
-    @media (min-width: 768px) {
-      .hero-banner {
-        width: 100vw !important;
-        margin-left: calc(50% - 50vw) !important;
-        margin-right: calc(50% - 50vw) !important;
-        object-fit: cover !important;
-        object-position: 35% 50% !important; /* siirrä fokus vasemmalle */
-      }
-    }
-    /* Mobile banner scaling */
-    @media (max-width: 640px) {
-      .hero-banner {
-        object-fit: contain !important;
-        object-position: center 100px !important;
-        width: 100% !important;
-        height: auto !important;
-        max-height: 70vh !important;
-      }
-      .logo-wrap {
-        padding-bottom: 0.5rem !important;
-      }
-      .logo-wrap img {
-        width: 200px !important;
-      }
-    }
-  </style>
-</head>
-<body class="w-screen min-h-screen overflow-x-hidden bg-black text-white">
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-opacity-80 bg-[var(--primary-black)] backdrop-blur z-50">
-    <div class="w-full px-4 mx-auto flex items-center justify-between p-4">
-      <a href="#">
-        <img src="logo-white.png" alt="Code Eternal logo" class="h-12">
-      </a>
-      <ul class="hidden md:flex space-x-8 text-lg heading-font">
-        <li><a href="#bio" class="hover:text-[var(--bright-red)] heading-font">Biography</a></li>
-        <li><a href="#music" class="hover:text-[var(--bright-red)] heading-font">Music</a></li>
-        <li><a href="#videos" class="hover:text-[var(--bright-red)] heading-font">Videos</a></li>
-        <li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
-        <li><a href="#contact" class="hover:text-[var(--bright-red)]">Contact</a></li>
-      </ul>
-      <div class="hidden md:flex space-x-4 ml-4">
-        <a href="https://www.instagram.com/code_eternal/" target="_blank">
-          <img src="icon-instagram.svg" alt="Instagram" class="h-8 w-8 hover:opacity-80">
-        </a>
-        <a href="https://www.youtube.com/@codeeternal" target="_blank">
-          <img src="icon-youtube.svg" alt="YouTube" class="h-8 w-8 hover:opacity-80">
-        </a>
-      </div>
-      <button class="md:hidden" id="menu-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div class="md:hidden bg-[var(--primary-black)]" id="mobile-menu" style="display:none">
-      <li><a href="#bio" class="hover:text-[var(--bright-red)] heading-font">Biography</a></li>
-      <li><a href="#music" class="hover:text-[var(--bright-red)] heading-font">Music</a></li>
-      <li><a href="#videos" class="hover:text-[var(--bright-red)] heading-font">Videos</a></li>
-      <li><a href="#tour" class="hover:text-[var(--bright-red)] heading-font">Tour</a></li>
-      <li><a href="#contact" class="hover:text-[var(--bright-red)]">Contact</a></li>
-    </div>
-  </nav>
 
-  <main class="pt-0">
-    <section id="bio" class="fade-in max-w-7xl mx-auto py-4 px-4 text-center mt-[-120px]">
-      <div class="relative w-full h-[90vh] overflow-hidden mb-12 mt-32 hero-wrap">
-        <img src="banner-new.jpg" alt="Code Eternal band banner" class="hero-banner absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high">
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
-        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <div class="relative z-10 flex justify-center items-end h-full pb-2 logo-wrap">
-          <img src="logo-white.png" alt="Code Eternal logo" class="w-[180px] sm:w-[260px] md:w-[360px]">
-        </div>
-      </div>
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.8);
+      z-index: 1000;
+    }
+    header img.logo {
+      height: 40px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 80px; /* tilaa fixed headerille */
+    }
+    .hero-media {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+    .hero-media img {
+      width: 100%;
+      height: clamp(480px, 70vh, 900px);
+      object-fit: cover;
+      object-position: 35% 50%; /* säädä, että vasemman puolen käsi näkyy */
+      display: block;
+    }
+    .hero-title {
+      text-align: center;
+      margin-top: -100px; /* nosta logon päälle */
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* CONTENT */
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    section p {
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* RESPONSIVE MENU: mobiilissa piilota ylimääräiset linkit */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+        padding: 1rem;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+      .
